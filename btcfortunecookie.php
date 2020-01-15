@@ -60,6 +60,12 @@ class BitcoinFortuneCookie {
         if (!isset($_GET['cookie'])) {
             $btcPayRequest = new BTCPayRequest($this->settingsPage->getBTCPayAppURL());
             echo $btcPayRequest->getDisplayBTCPayButtonHTML();
+		
+		
+echo 	"<h1>Start HTML work here. When done, zip and upload to Wordpress, delete old plugin first.</h1>
+	<p>Always start HTML with quotes and end with quotes and semicolon.</p>"; 	
+		
+		
             return;
         } elseif (empty($this->invoices->getInvoiceById($_GET['cookie']))) {
             echo '<p>' . BfcConstants::INVALID_COOKIE_TEXT . '</p>';
